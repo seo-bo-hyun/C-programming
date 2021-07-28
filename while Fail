@@ -1,0 +1,134 @@
+#include <stdio.h>
+
+int main()
+{
+	While();
+}
+
+While()
+{
+    // 3. 자판기에서 담배를 선택하여 출력하는 프로그램
+            // 조건1) 자판기에 입력한 금액에 대한 거스름돈 처리 필요
+
+            // ========================
+            // 담배 자판기 프로그램 v1.0
+            // ========================
+
+            // 원하는 담배를 메뉴에서 선택하세요
+            // 1. 에쎄 골든 리프 : 6000원
+            // 2. 에쎄 스페셜 골드 : 5000원
+            // 3. 더원 블루 : 4500원
+            // 4. 더원 오렌지 : 4500원
+            // 5. 더원 화이트 : 4500원
+
+            // 담배를 선택하세요 -> 5
+            // 더원 화이트를 선택하셨습니다 
+
+            // 담배 금액을 입금하세요 -> 10000
+            // 더원 화이트를 구매했습니다 거스름돈 5500원을 받으세요 
+
+    int golden = 6000, special = 5000, blue = 4500, orange = 4500, white = 4500;
+    int a, b, c, d;
+    //int golden1 = b - golden, special1 = b - special, blue1 = b - blue, orange1 = b - orange, white1 = b - white;
+
+    printf("========================\n");
+    printf("담배 자판기 프로그램 v1.0\n");
+    printf("========================\n\n");
+
+    printf("원하는 담배를 메뉴에서 선택하세요\n\n");
+
+    printf("1. 에쎄 골든 리프 : 6000원\n");
+    printf("2. 에쎄 스페셜 골드 : 5000원\n");
+    printf("3. 더원 블루 : 4500원\n");
+    printf("4. 더원 오렌지 : 4500원\n");
+    printf("5. 더원 화이트 : 4500원\n\n");
+
+    printf("원하는 담배를 선택하세요 : \n");
+    scanf("%d", &a);
+    
+    switch (a)
+    {
+        case 1:
+            printf("에쎄 골든 리프를 선택하셨습니다\n\n");
+            break;
+        case 2:
+            printf("에쎄 스페셜 골드를 선택하셨습니다\n\n");
+            break;
+        case 3:
+            printf("더원 블루를 선택하셨습니다\n\n");
+            break;
+        case 4:
+            printf("더원 오렌지를 선택하셨습니다\n\n");
+            break;
+        case 5:
+            printf("더원 화이트를 선택하셨습니다\n\n");
+        break;
+    }
+
+    
+
+    if (a == 1)
+    {
+        printf("담배 금액을 입력하세요 : \n");
+        scanf("%d", &b);
+
+        if (b < golden)
+        {
+            printf("담배 금액이 부족합니다 담배 금액을 다시 입력하세요 : \n");
+            scanf("%d", &c);
+
+            if (c < b)
+            {
+                while (c < b)
+            {
+                printf("금액이 부족합니다 다시 입력하세요 : \n");
+                scanf("%d", &d);
+
+                if (d > golden)
+                {
+                    printf("에쎄 골든 리프의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", golden, d - golden);
+                    break;
+                }
+
+                if (d < golden)
+                {
+                    printf("그래도 모자랍니다 다시 입력하세요 : \n");
+                }
+            }
+            }
+
+            
+        }
+        printf("에쎄 골든 리프의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", golden, b - golden);
+    }
+
+    if (a == 2)
+    {
+        printf("담배 금액을 입력하세요 : \n");
+        scanf("%d", &b);
+        printf("에쎄 스페셜 골드의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", special, b - special);
+    }
+
+    if (a == 3)
+    {
+        printf("담배 금액을 입력하세요 : \n");
+        scanf("%d", &b);
+        printf("더원 블루의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", blue, b - blue);
+    }
+
+    if (a == 4)
+    {
+        printf("담배 금액을 입력하세요 : \n");
+        scanf("%d", &b);
+        printf("더원 오렌지의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", orange, b - orange);
+    }
+
+    if (a == 5)
+    {
+        printf("담배 금액을 입력하세요 : \n");
+        scanf("%d", &b);
+        printf("더원 화이트의 가격은 %d원 이었고, 거스름돈은 %d원 입니다\n", white, b - white);
+    }
+
+
+}
