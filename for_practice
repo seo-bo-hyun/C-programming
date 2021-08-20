@@ -1,0 +1,128 @@
+#include <stdio.h>
+
+int main()//실행 함수.
+{
+  //mytest1();
+  //mytest2();
+  //mytest3();
+  //mytest4();
+  //myif();
+  //myif_test();
+  //mywhile();
+  //mywhile_D2();
+  //mywhile_D3();
+  //mywhile_D4();
+  //myif_while();
+  //mywhile_test();
+  myfor();
+}
+
+myfor()
+{
+  /*int a, b = 1, c = 1;
+  printf("\n\n지금부터 1부터 100까지의 숫자를 나열합니다\n\n");
+
+  for (int i = 1; i <= 100; i++)
+  {
+	printf("============================");
+	printf("\n증감되는 i의 숫자 = %d\n", i);
+	printf("\n증감되지 않는 b의 숫자 = %d\n", b);
+	printf("\n함께 증감하는 c의 숫자 = %d\n", c);
+	printf("==============================");
+	c++;
+
+  }*/
+
+  /*1. i가 100까지 증가하게 만드세요.그 뒤 b가 i보다 50이 높게 증가하게 해주세요.그 뒤 c가 b의 두배까지 증가하게 해주세요. 
+	2. c의 증가가 멈추면 다시 - 500까지 떨어집니다.그 뒤 i와 b가 동시에 - 500까지 떨어지게 되고, (b--)
+	i와 b와 c가 일치했을 때 i가 3000까지 먼저 증가하게 됩니다.i가 증가하던 중 i가 1500이 되었을 떄, (if <= 1500)
+	b가 증가하기 시작하며, b의 숫자가 i보다 1000이 더 크기 시작할 때 c가 증가하게 되고, b는 5000에서 멈춥니다.
+	b가 5000까지 증가했을 때 i와 c가 b까지만 증가하게 하고 프로그램이 종료됩니다.*/
+
+  
+
+  for (int i = 1; i <= 100; i++)
+  {
+	printf("i의 숫자 : %d\n", i);
+  }
+
+  printf("\n");
+
+  for (int b = 101; b <= 150; b++)
+  {
+	printf("b의 숫자 : %d\n", b);
+  }
+
+  printf("\n");
+
+  for (int c = 151; c <= 300; c++)
+  {
+	printf("c의 숫자 : %d\n", c);
+	
+  }
+
+  printf("\n");
+
+  for (int c = 299; c >= -500; c--)
+  {
+	printf("c의 숫자 : %d\n", c);
+  }
+
+  printf("\n");
+
+  for (int i = 99; i >= -500; i--)
+  {
+	printf("i의 숫자 : %d\n", i);
+	
+  }
+
+  printf("\n");
+
+  for (int b = 149; b >= -500; b--)
+  {
+	printf("b의 숫자 :%d\n", b);
+  }
+
+  printf("\n");
+
+  for (int i = -500; i <= 3000; i++)
+  {
+	printf("i의 숫자 : %d\n", i);
+	
+
+	if (i == 1500)
+	{
+	  printf("\n");
+	  for (int b = -500; b <= 5000; b++)
+	  {
+		printf("b의 숫자 : %d\n", b);
+		
+		
+		if (b == 4000)
+		{
+		  printf("\n");
+		  for (int c = -500; c <= 5000; c++)
+		  {
+			printf("c의 숫자 : %d\n", c);
+			
+		  }
+		  printf("\n");
+		}
+	  }
+	}
+  }
+
+  printf("\n");
+
+  for (int i = 3001; i <= 5000; i++)
+  {
+	printf("i의 숫자 : %d\n", i);
+  }
+
+
+
+
+
+
+
+}
